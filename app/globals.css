@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+  body {
+    @apply bg-primary-500 text-light-primary;
+  }
+}
+
+@layer components {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .work-content {
+    @apply px-5 absolute inset-0 flex-center flex-col bg-yellow-shade bg-opacity-50 text-primary-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-lg;
+  }
+
+  .skills-grid {
+    @apply grid grid-cols-2 md:grid-cols-4 w-full mx-auto gap-[1px] bg-grid-bg;
+  }
+  .contactInfo-list {
+    @apply flex items-center justify-center space-x-4;
+  }
+}
