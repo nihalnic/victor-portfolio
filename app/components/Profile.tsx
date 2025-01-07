@@ -26,14 +26,14 @@ const Profile = () => {
       <Link href="/contact" className=" md:mb-[55px] mb-[35px]">
         <Image src="/icons/light.svg" alt="light-mood" width={24} height={24} />
       </Link>
-      <div className="flex-center flex-col md:flex-row gap-10 ">
+      <div className="flex-center flex-col md:flex-row gap-10">
         <div className="w-[115] h-[115] flex-center bg-primary-500 md:bg-light-primary border-[3px] md:border border-yellow-shade rounded-full ">
           <Image
             src="/images/profile.png"
             alt="profile-pic"
             width={100}
             height={100}
-            className="w-[calc(100%-5px)] h-auto"
+            className="w-[calc(100%-2px)] h-[calc(100%-2px)]"
           />
         </div>
         <div className="flex-center flex-col md:items-start">

@@ -1,45 +1,19 @@
-interface Header {
-  title: string;
-  description: string;
-}
-
-interface Experience {
-  yearsExperience: number;
-  completedProjects: number;
-  satisfiedCustomers: number;
-}
-
-interface SocialLink {
-  platform: string;
-  URL: string;
-  icon: string;
-}
-
-interface portfolioWorks {
-  title: string;
-  img: string;
-  link: string;
-  description?: string;
-}
-
-interface Skill {
-  img: string;
-  alt: string;
-}
-
-interface contactInfo {
-  img: string;
-  alt: string;
-  text: string | number;
-}
+import {
+  contactInfo,
+  Skill,
+  portfolioWorks,
+  SocialLink,
+  Experience,
+  Header,
+} from "../typs";
 
 export const CONTENT: {
   Headers: Header;
   Experience: Experience;
 } = {
   Headers: {
-    title: "Victor Alvarado",
-    description: "Digital Artist",
+    title: "Nihal Nick",
+    description: "Backend Developer",
   },
   Experience: {
     yearsExperience: 5,
@@ -125,37 +99,35 @@ export const PORTFOLIO_WORKS: portfolioWorks[] = [
   {
     title: "Work- One",
     img: "/images/work-1.png",
-    link: "/work/1",
     description: "This is a brief description of work- One.",
   },
   {
     title: "Work- Two",
     img: "/images/work-2.png",
-    link: "/work/2",
     description: "This is a brief description of work- Two.",
   },
   {
     title: "Work- Three",
     img: "/images/work-3.png",
-    link: "/work/3",
     description: "This is a brief description of work- Three.",
   },
   {
     title: "Work- Four",
     img: "/images/work-4.png",
-    link: "/work/4",
     description: "This is a brief description of work- Four.",
   },
   {
     title: "Work- Five",
     img: "/images/work-5.png",
-    link: "/work/5",
     description: "This is a brief description of work- Five.",
   },
   {
     title: "Work- Six",
     img: "/images/work-6.png",
-    link: "/work/6",
     description: "This is a brief description of work- Six.",
   },
-];
+
+].map((work, index) => ({
+  ...work,
+  link: `/work/${index + 1}`,
+}));

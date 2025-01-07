@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Source_Code_Pro } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/shared/Footer";
 
-const sourceCode = Source_Code_Pro({
+const firaMono = Fira_Code({
   subsets: ["latin"],
+  weight: ["300"],
 });
 
 export const metadata: Metadata = {
-  title: "Victor Alvarado - Everything is canvas.",
+  title: "Nihal Nick - Everything under logic.",
   description: "Best digital NFT & Illustration atrist.",
 };
 
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sourceCode.className} antialiased`}>
+      <body className={`${firaMono.className} antialiased`}>
         <main className=" overflow-hidden max-w-[775px] w-full  mx-auto my-8 px-4 flex-center flex-col uppercase">
           {children}
         </main>

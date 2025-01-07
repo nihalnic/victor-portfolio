@@ -7,9 +7,9 @@ const Skills = () => {
 
   return (
     <div className=" max-w-full mx-auto h-full flex-center flex-col mt-16">
-      <h1 className=" py-5 text-light-primary text-2xl tracking-wider ">
-        I work with software I <span className=" font-semibold ">expert</span>{" "}
-        in
+      <h1 className=" py-5 text-light-primary md:text-2xl text-lg text-center tracking-wide ">
+        I work with software I{" "}
+        <span className=" font-semibold text-yellow-shade ">expert</span> in
       </h1>
       <div className=" skills-grid mt-5">
         {Array.from({ length: gridSize }, (_, i) => (
